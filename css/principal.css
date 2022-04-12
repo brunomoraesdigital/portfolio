@@ -16,7 +16,7 @@ input {
   flex: 0 0 100% ;
   display: flex;
 }
-label {
+.lbl-sc {
   display: flex;
 }
 
@@ -28,29 +28,29 @@ label:nth-child(even) section{background-color: lightblue;}
 label:nth-child(odd) section{background-color: lightseagreen;}
 */
 
-label .secao { 
+.lbl-sc .secao { 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-label:nth-child(6) .secao { 
+.lbl-sc:nth-child(6) .secao { 
 background-image: url(../imagens/aguia.jpg);
 /*background-image: url(../imagens/amarelo-300x300-bg.jpg);*/
 }
-label:nth-child(7) .secao { 
+.lbl-sc:nth-child(7) .secao { 
 /*background-image: url(https://source.unsplash.com/random/640x426/?pose);*/
 background-image: url(../imagens/lilas-300x300-bg.jpg);
 }
-label:nth-child(8) .secao {
+.lbl-sc:nth-child(8) .secao {
 /*background-image: url(https://source.unsplash.com/random/640x426/?people);*/
 background-image: url(../imagens/vermelho-300x300-bg.jpg);
 }
-label:nth-child(9) .secao {
+.lbl-sc:nth-child(9) .secao {
 /*background-image: url(https://source.unsplash.com/random/640x426/?blog);*/
 background-image: url(../imagens/verde-300x300-bg.jpg);
 }
-label:nth-child(10) .secao {
+.lbl-sc:nth-child(10) .secao {
 /*background-image: url(https://source.unsplash.com/random/640x426/?contact);*/
 background-image: url(../imagens/azul-300x300-bg.jpg);
 }
@@ -59,10 +59,10 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 /* ************************************* */
 
 /* ESCONDE */
-div, footer {display: none;}
+.corpo, .rodape {display: none;}
 /* MOSTRA AO CLICAR NAS SECÕES */
-.sec-ativa div {display: flex;}
-.sec-ativa footer {display: flex;}
+.sec-ativa .corpo {display: flex;}
+.sec-ativa .rodape {display: flex;}
 
 .secao {
   width: 100%;
@@ -81,34 +81,25 @@ div, footer {display: none;}
   justify-content: flex-end;
 }
 
-header {
+.cabecalho {
   /*background-color: rgb(214, 170, 245);*/
   display: flex;
   justify-content: center;
 }
 /* AJUSTA A ESQUERDA AO CLICAR NA SEÇÃO */
-.sec-ativa header {justify-content: flex-start;}
+.sec-ativa .cabecalho {justify-content: flex-start;}
 
-div {
+.corpo {
   /*background-color: rgb(180, 142, 207);*/
   flex-direction: column;
 }
-footer {
+.rodape {
   /*background-color: rgb(130, 100, 151);*/
 }
 
 h2 {
   transition: top 0.35s, opacity 0.15s;
 }
-
-
-
-
-
-
-
-
-
 
 /* ************************************* */
 /* CONTROLE DE MÍDIAS                    */
@@ -118,7 +109,7 @@ h2 {
   .principal {
   flex-direction: column;/*aqui*/
   }
-  label {
+  .lbl-sc {
   flex: 0 0 7.5%;/*aqui*/
   }
   .secao {
@@ -134,7 +125,7 @@ h2 {
   .principal {
   flex-direction: row;/*aqui*/
   }
-  label {
+  .lbl-sc {
   flex: 0 0 10%;/*aqui*/
   }
   .secao {
@@ -144,10 +135,10 @@ h2 {
   flex: 0 0 60%;
   color: gold;
   }
-  .secao header {
+  .secao .cabecalho {
     transform: translate(-20px, -50%) rotate(-90deg);
   }
-  .sec-ativa .secao header {
+  .sec-ativa .secao .cabecalho {
     transform: translate(0px, 0%) rotate(0deg);
   }
 }
