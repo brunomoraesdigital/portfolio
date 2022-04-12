@@ -39,19 +39,19 @@ background-image: url(../imagens/aguia.jpg);
 /*background-image: url(../imagens/amarelo-300x300-bg.jpg);*/
 }
 label:nth-child(7) .secao { 
-background-image: url(https://source.unsplash.com/random/?pose);
+background-image: url(https://source.unsplash.com/random/640x426/?pose);
 /*background-image: url(../imagens/lilas-300x300-bg.jpg);*/
 }
 label:nth-child(8) .secao {
-background-image: url(https://source.unsplash.com/random/?people);
+background-image: url(https://source.unsplash.com/random/640x426/?people);
 /*background-image: url(../imagens/vermelho-300x300-bg.jpg);*/
 }
 label:nth-child(9) .secao {
-background-image: url(https://source.unsplash.com/random/?blog);
+background-image: url(https://source.unsplash.com/random/640x426/?blog);
 /*background-image: url(../imagens/verde-300x300-bg.jpg);*/
 }
 label:nth-child(10) .secao {
-background-image: url(https://source.unsplash.com/random/?contact);
+background-image: url(https://source.unsplash.com/random/640x426/?contact);
 /*background-image: url(../imagens/azul-300x300-bg.jpg);*/
 }
 /* ************************************* */
