@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <div id="preloader" class="preloader">
-      <div id="loader" class="loader"></div>
+  <div id="precarregamento" class="precarregamento">
+      <div id="carregando" class="carregando"></div>
   </div> 
   <main id="" class="principal">
     <input onclick="clique" id="sobre" type="radio" name="sec" value="">
@@ -92,33 +92,17 @@
 
   
       <!-- ----- -->
+      <script src="js/sanfona.js"></script>
       <script src="js/headline.js"></script>
+      <script src="js/precarregamento.js"></script>
 
       <!-- ----- -->
 
       <script>
-        var acc = document.getElementsByClassName("lbl-sc");
-        var i;
-        var j;
-        for (i = 0; i < acc.length; i++) 
-        {
-          acc[i].addEventListener("click", function() 
-          {
-            for (j = 0; j < acc.length; j++) 
-            {
-              acc[j].classList.remove('sec-ativa');
-            }
-            this.classList.toggle("sec-ativa");
-            //===================================
-          });
-        }
+        
       </script>
       <script>
-        // LOADER
-        const sobreposicao = document.querySelector("#preloader");
-        window.addEventListener("load", function () {
-          sobreposicao.style.display = "none";
-        })
+
       </script>
       
 </body>
