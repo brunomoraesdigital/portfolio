@@ -63,30 +63,31 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 .secao {
   width: 100%;
   height: 100%;
-  padding: 1rem;
-  
+  cursor: pointer;
+
   color: #f2f2f2;
   
   display: flex;
   flex-direction: column;
   
-  cursor: pointer;
-  transition: all 0.35s ease;
-  cursor: pointer;
+  /*transition: all 0.35s ease;*/
 
   overflow: hidden;
   border: 1px solid black;
 }
 .sec-ativa .secao {
   justify-content: flex-end;
+  padding: 1rem;
+  cursor: default;
 }
-
 
 /* ESCONDE POR PADRÃO AS SEÇÕES */
 .corpo, .rodape {display: none;}
 /* MOSTRA AS SECÕES AO CLICAR */
 .sec-ativa .corpo {display: flex;}
 .sec-ativa .rodape {display: flex;}
+
+/************************/
 
 /* ALINHA O CONTEUDO DA GUIA DA SEÇÃO NO CENTRO*/
 .cabecalho { /*header*/
@@ -97,26 +98,35 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 .sec-ativa .cabecalho {
   justify-content: flex-start;
 }
-.cabecalho { /*headet*/
-
-}
 .corpo { /*div*/
   flex-direction: column;
 }
+.sec-ativa .corpo {
+  flex-basis: 30vh;
+ } 
 .rodape { /*footer*/
-
 }
-
+.sec-ativa .rodape {
+}
 /* ***************************** */
 /* titulos e paragrafos.         */
 /* ***************************** */
-h1, h2 {
+h2 {
   color: white;
   font-weight: 700;
 }
+.sec-ativa h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
 h3 {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+p {
+  margin-bottom: 0.7rem;
+  line-height: 1.3;
 }
 
 /* ************************************* */
