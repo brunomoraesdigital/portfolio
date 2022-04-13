@@ -56,9 +56,6 @@ background-image: url(../imagens/verde-300x300-bg.jpg);
 /*background-image: url(https://source.unsplash.com/random/640x426/?contact);*/
 background-image: url(../imagens/azul-300x300-bg.jpg);
 }
-/* ************************************* */
-/* BACKGROUND DAS SEÇÕES FIM             */
-/* ************************************* */
 
 /* ************************************* */
 /* SEÇÕES                                */
@@ -121,9 +118,6 @@ h3 {
   color: white;
   font-weight: 500;
 }
-/* ***************************** */
-/* titulos e paragrafos - fim.   */
-/* ***************************** */
 
 /* ************************************* */
 /* CONTROLE DE MÍDIAS                    */
@@ -166,6 +160,4 @@ h3 {
     transform: translate(0px, 0%) rotate(0deg);
   }
 }
-/* ************************************* */
-/* CONTROLE DE MÍDIAS FIM                */
-/* ************************************* */
+
