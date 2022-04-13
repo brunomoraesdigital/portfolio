@@ -1,6 +1,10 @@
 html {
+  /*
   width:100%;
   height:100%;
+  */
+  width: 100vw;
+  height: 100vh;
   font-size:16px;
 }
 body {
@@ -10,13 +14,13 @@ body {
   display: flex;
 }
 input {
-  display: none;
+ display: none;
 }
-.principal {
-  flex: 0 0 100% ;
+.principal { /*main*/
+  flex: 0 0 100%;
   display: flex;
 }
-.lbl-sc {
+.lbl-sc { /*label*/
   display: flex;
 }
 
@@ -58,8 +62,6 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 /* BACKGROUND DAS SEÇÕES FIM             */
 /* ************************************* */
 
-
-
 /* ESCONDE */
 .corpo, .rodape {display: none;}
 /* MOSTRA AO CLICAR NAS SECÕES */
@@ -72,8 +74,6 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
   padding: 1rem;
   
   color: #f2f2f2;
-  
-  
   
   display: flex;
   flex-direction: column;
