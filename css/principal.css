@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
 html {
   /*
   width:100%;
@@ -12,6 +15,7 @@ body {
   height:100%;
   position: fixed;
   display: flex;
+  
 }
 input {
  display: none;
@@ -64,6 +68,7 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
   width: 100%;
   height: 100%;
   cursor: pointer;
+  
 
   color: #f2f2f2;
   
@@ -95,6 +100,7 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 .cabecalho { /*header*/
   display: flex;
   justify-content: center;
+  text-transform: uppercase; 
 }
 /* AO ABRIR A SEÇÃO, AJUSTA O CONTEÚDO A ESQUERDA*/
 .sec-ativa .cabecalho {
@@ -102,6 +108,7 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 }
 .corpo { /*div*/
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
 }
 .sec-ativa .corpo {
   flex-basis: 30vh;
@@ -114,6 +121,7 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 /* titulos e paragrafos.         */
 /* ***************************** */
 .sec-ativa h1 {
+  text-shadow: 1px 1px #aaa;
   color: white;
   font-weight: 900;
   font-size: 2.5rem;
