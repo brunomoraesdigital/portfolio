@@ -82,10 +82,12 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 }
 
 /* ESCONDE POR PADRÃO AS SEÇÕES */
-.corpo, .rodape {display: none;}
+.corpo, .rodape, .ttl-a {display: none;}
 /* MOSTRA AS SECÕES AO CLICAR */
 .sec-ativa .corpo {display: flex;}
 .sec-ativa .rodape {display: flex;}
+.sec-ativa .ttl-a {display: flex;}
+.sec-ativa .ttl-b {display: none;}
 
 /************************/
 
@@ -111,6 +113,12 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 /* ***************************** */
 /* titulos e paragrafos.         */
 /* ***************************** */
+.sec-ativa h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+}
 h2 {
   color: white;
   font-weight: 700;
@@ -120,10 +128,12 @@ h2 {
   margin-bottom: 0.7rem;
 }
 h3 {
+  font-size: 1.5rem;
   color: white;
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
+
 p {
   margin-bottom: 0.7rem;
   line-height: 1.3;
