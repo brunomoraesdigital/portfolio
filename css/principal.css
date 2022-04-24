@@ -39,6 +39,7 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 .lbl-sc:nth-child(6) .secao { 
 background-image: url(../imagens/aguia.jpg);
@@ -60,7 +61,17 @@ background-image: url(../imagens/verde-300x300-bg.jpg);
 /*background-image: url(https://source.unsplash.com/random/640x426/?contact);*/
 background-image: url(../imagens/azul-300x300-bg.jpg);
 }
+.lbl-sc .secao::after { 
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #3f3f3f;
+  opacity: 30%;
+  position: absolute;
 
+}
 /* ************************************* */
 /* SEÇÕES                                */
 /* ************************************* */
@@ -101,6 +112,7 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
   display: flex;
   justify-content: center;
   text-transform: uppercase; 
+  z-index: 2;
 }
 /* AO ABRIR A SEÇÃO, AJUSTA O CONTEÚDO A ESQUERDA*/
 .sec-ativa .cabecalho {
@@ -109,11 +121,13 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
 .corpo { /*div*/
   flex-direction: column;
   font-family: 'Lato', sans-serif;
+  z-index: 2;
 }
 .sec-ativa .corpo {
   flex-basis: 30vh;
  } 
 .rodape { /*footer*/
+  z-index: 2;
 }
 .sec-ativa .rodape {
 }
