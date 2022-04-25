@@ -64,8 +64,8 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #3f3f3f;
-  opacity: 30%;
+  background-color: #2e2e2e;
+  opacity: 50%;
   position: absolute;
 }
 /* ************************************* */
@@ -133,21 +133,19 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   text-shadow: .5px .5px #000, 1px 1px #000, 1.5px 1.5px #000, 2px 2px #000;
   color: white;
   font-weight: 900;
-  /*font-size: 2.5rem;*/
   font-size: 28px;
   margin-bottom: 8px;
 }
 h2 {
   color: white;
   font-weight: 700;
+  font-size: 25px;
 }
 .sec-ativa h2 {
-  /*font-size: 2rem;*/
   margin-bottom: 8px;
   font-size: 25px;
 }
 h3 {
-  /*font-size: 1.5rem;*/
   font-size: 18px;
   color: white;
   font-weight: 600;
@@ -157,6 +155,8 @@ h3 {
 p {
   margin-bottom: 8px;
   line-height: 1.1;
+    font-size: 18px;
+
 }
 a {
   margin-top: 4px;
@@ -237,14 +237,18 @@ a:active {font-weight: 900;  color: rebeccapurple;}
 
 
   .secao .cabecalho {
-    transform: /*translate(-20px, -50%)*/ rotate(-90deg);
+    transform: translate(-20px, -85px) rotate(-90deg);
   }
   .sec-ativa .secao .cabecalho {
-    transform: /*translate(0px, 0%)*/ rotate(0deg);
+    transform: translate(0px, 0%) rotate(0deg);
   }
-  
+/**/
+.secao .cabecalho {
+  position: relative;
+  justify-content: flex-start;
+}
   .ttl-b {
-
+    position: absolute;
   }
 
 }
