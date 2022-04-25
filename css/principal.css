@@ -44,10 +44,11 @@ label:nth-child(odd) section{background-color: lightseagreen;}
 }
 .lbl-sc:nth-child(6) .secao { 
 background-image: url(../imagens/aguia.jpg);
+background-position: 50% 40%;
 }
 .lbl-sc:nth-child(7) .secao { 
 background-image: url(../imagens/habilidades.jpg);
-background-position: center 24%;
+background-position: 65% 24%;
 }
 .lbl-sc:nth-child(8) .secao {
 background-image: url(../imagens/trabalhos.jpg);
@@ -57,6 +58,7 @@ background-image: url(../imagens/blog.jpg);
 }
 .lbl-sc:nth-child(10) .secao {
 background-image: url(../imagens/contato.jpg);
+background-position: 75% 30%;
 }
 .lbl-sc .secao::after { 
   content: "";
