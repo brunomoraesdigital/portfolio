@@ -47,7 +47,7 @@ background-image: url(../imagens/aguia.jpg);
 }
 .lbl-sc:nth-child(7) .secao { 
 background-image: url(../imagens/habilidades.jpg);
-background-position: 0 24%;
+background-position: 50% 24%;
 }
 .lbl-sc:nth-child(8) .secao {
 background-image: url(../imagens/trabalhos.jpg);
