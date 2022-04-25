@@ -9,6 +9,7 @@ html {
   width: 100vw;
   height: 100vh;
   font-size:16px;
+  user-select: none;
 }
 body {
   width:100%;
@@ -46,20 +47,16 @@ background-image: url(../imagens/aguia.jpg);
 /*background-image: url(../imagens/amarelo-300x300-bg.jpg);*/
 }
 .lbl-sc:nth-child(7) .secao { 
-/*background-image: url(https://source.unsplash.com/random/640x426/?pose);*/
-background-image: url(../imagens/lilas-300x300-bg.jpg);
+background-image: url(https://source.unsplash.com/random/640x426/?pose);
 }
 .lbl-sc:nth-child(8) .secao {
-/*background-image: url(https://source.unsplash.com/random/640x426/?people);*/
-background-image: url(../imagens/vermelho-300x300-bg.jpg);
+background-image: url(https://source.unsplash.com/random/640x426/?people);
 }
 .lbl-sc:nth-child(9) .secao {
-/*background-image: url(https://source.unsplash.com/random/640x426/?blog);*/
-background-image: url(../imagens/verde-300x300-bg.jpg);
+background-image: url(https://source.unsplash.com/random/640x426/?blog);
 }
 .lbl-sc:nth-child(10) .secao {
-/*background-image: url(https://source.unsplash.com/random/640x426/?contact);*/
-background-image: url(../imagens/azul-300x300-bg.jpg);
+background-image: url(https://source.unsplash.com/random/640x426/?contact);
 }
 .lbl-sc .secao::after { 
   content: "";
@@ -70,7 +67,6 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
   background-color: #3f3f3f;
   opacity: 30%;
   position: absolute;
-
 }
 /* ************************************* */
 /* SEÇÕES                                */
@@ -124,7 +120,6 @@ background-image: url(../imagens/azul-300x300-bg.jpg);
   z-index: 2;
 }
 .sec-ativa .corpo {
-  flex-basis: 30vh;
  } 
 .rodape { /*footer*/
   z-index: 2;
@@ -209,11 +204,17 @@ a:active {font-weight: 900;  color: rebeccapurple;}
   flex: 0 0 60%;
   color: gold;
   }
+  
   .secao .cabecalho {
-    transform: translate(-20px, -50%) rotate(-90deg);
+    transform: /*translate(-20px, -50%)*/ rotate(-90deg);
   }
   .sec-ativa .secao .cabecalho {
-    transform: translate(0px, 0%) rotate(0deg);
+    transform: /*translate(0px, 0%)*/ rotate(0deg);
   }
+  
+  .ttl-b {
+
+  }
+
 }
 
