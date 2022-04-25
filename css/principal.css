@@ -43,23 +43,21 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   position: relative;
 }
 .lbl-sc:nth-child(6) .secao { 
-background-image: url(../imagens/aguia.jpg);
-background-position: 50% 40%;
-}
-.lbl-sc:nth-child(7) .secao { 
-background-image: url(../imagens/habilidades.jpg);
-background-position: 65% 24%;
-}
-.lbl-sc:nth-child(8) .secao {
-background-image: url(../imagens/trabalhos.jpg);
-}
-.lbl-sc:nth-child(9) .secao {
-background-image: url(../imagens/blog.jpg);
-}
-.lbl-sc:nth-child(10) .secao {
-background-image: url(../imagens/contato.jpg);
-background-position: 75% 30%;
-}
+  background-image: url(../imagens/aguia.jpg);
+  }
+  .lbl-sc:nth-child(7) .secao { 
+  background-image: url(../imagens/habilidades.jpg);
+  }
+  .lbl-sc:nth-child(8) .secao {
+  background-image: url(../imagens/trabalhos.jpg);
+  }
+  .lbl-sc:nth-child(9) .secao {
+  background-image: url(../imagens/blog.jpg);
+  }
+  .lbl-sc:nth-child(10) .secao {
+  background-image: url(../imagens/contato.jpg);
+  }
+
 .lbl-sc .secao::after { 
   content: "";
   width: 100%;
@@ -190,6 +188,21 @@ a:active {font-weight: 900;  color: rebeccapurple;}
   flex: 0 0 70%;
   color: red;
   }
+  .lbl-sc:nth-child(6) .secao { 
+  background-position: 50% 40%;
+  }
+  .lbl-sc:nth-child(7) .secao { 
+  background-position: 65% 24%;
+  }
+  .lbl-sc:nth-child(8) .secao {
+    background-position: center;
+  }
+  .lbl-sc:nth-child(9) .secao {
+    background-position: center;
+  }
+  .lbl-sc:nth-child(10) .secao {
+  background-position: 75% 30%;
+  }
 }
 @media only screen and (min-width: 1024px )
 {
@@ -206,7 +219,23 @@ a:active {font-weight: 900;  color: rebeccapurple;}
   flex: 0 0 60%;
   color: gold;
   }
-  
+  .lbl-sc:nth-child(6) .secao { 
+  background-position: 46% 40%;
+  }
+  .lbl-sc:nth-child(7) .secao { 
+  background-position: 59% 24%;
+  }
+  .lbl-sc:nth-child(8) .secao {
+  background-position: 59% 24%;
+  }
+  .lbl-sc:nth-child(9) .secao {
+  background-position: center;
+  }
+  .lbl-sc:nth-child(10) .secao {
+  background-position: 64% 30%;
+  }
+
+
   .secao .cabecalho {
     transform: /*translate(-20px, -50%)*/ rotate(-90deg);
   }
