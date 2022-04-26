@@ -160,6 +160,9 @@ p {
 }
 a {
   margin-top: 4px;
+}
+a {
+  margin-top: 4px;
   text-transform: uppercase;
 }
 
@@ -188,19 +191,19 @@ a:active {font-weight: 900;  color: rebeccapurple;}
   flex: 0 0 70%;
   color: red;
   }
-  .lbl-sc:nth-child(6) .secao { 
+  .lbl-sc:nth-child(6) .secao { /*sobre*/
   background-position: 50% 40%;
   }
-  .lbl-sc:nth-child(7) .secao { 
+  .lbl-sc:nth-child(7) .secao { /*habilidades*/
   background-position: 65% 24%;
   }
-  .lbl-sc:nth-child(8) .secao {
+  .lbl-sc:nth-child(8) .secao { /*trabalhos*/
     background-position: center;
   }
-  .lbl-sc:nth-child(9) .secao {
+  .lbl-sc:nth-child(9) .secao { /*blog*/
     background-position: center;
   }
-  .lbl-sc:nth-child(10) .secao {
+  .lbl-sc:nth-child(10) .secao { /*contato*/
   background-position: 75% 30%;
   }
 }
@@ -219,19 +222,19 @@ a:active {font-weight: 900;  color: rebeccapurple;}
   flex: 0 0 60%;
   color: gold;
   }
-  .lbl-sc:nth-child(6) .secao { 
+  .lbl-sc:nth-child(6) .secao { /*sobre*/
   background-position: 46% 40%;
   }
-  .lbl-sc:nth-child(7) .secao { 
+  .lbl-sc:nth-child(7) .secao { /*habilidades*/
   background-position: 59% 24%;
   }
-  .lbl-sc:nth-child(8) .secao {
-  background-position: 59% 24%;
+  .lbl-sc:nth-child(8) .secao { /*trabalhos*/
+  background-position: 60% 0%;
   }
-  .lbl-sc:nth-child(9) .secao {
+  .lbl-sc:nth-child(9) .secao { /*blog*/
   background-position: center;
   }
-  .lbl-sc:nth-child(10) .secao {
+  .lbl-sc:nth-child(10) .secao { /*contato*/
   background-position: 64% 30%;
   }
 
