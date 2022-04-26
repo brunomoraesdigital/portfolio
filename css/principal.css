@@ -161,18 +161,26 @@ p {
 a {
   margin-top: 4px;
 }
-a {
+.rodape a {
   margin-top: 4px;
   text-transform: uppercase;
-  padding: 11px 2px;
+  display: flex;
+  padding: 3px 3px;
   border-radius: 11px;
   background-color: #2e2e2e;
   opacity: 90%;
 }
-a span {
+.rodape i {
+  border: 1px solid #f0f0f0;
+  font-weight: 900;
+  border-radius: 10px 0 0 10px;
+  padding: 8px;
+  border-right:none;
+}
+.rodape span {
   padding: 8px;
   border: 1px solid #f0f0f0;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   background-color: #2e2e2e;
 }
 
