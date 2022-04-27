@@ -161,7 +161,7 @@ p {
 a {
   margin-top: 4px;
 }
-.rodape a {
+.botao a {
   margin-top: 4px;
   text-transform: uppercase;
   display: flex;
@@ -170,25 +170,49 @@ a {
   background-color: #2e2e2e;
   opacity: 90%;
 }
-.rodape i {
+.botao i {
   border: 1px solid #f0f0f0;
   font-weight: 900;
   border-radius: 10px 0 0 10px;
   padding: 8px;
   border-right:none;
 }
-.rodape span {
+.botao span {
   padding: 8px;
   border: 1px solid #f0f0f0;
   border-radius: 0 10px 10px 0;
   background-color: #2e2e2e;
 } 
 
-a:link {font-weight: 900;  color: #e91e39;}
-a:visited {font-weight: 900;  color: #e91e39;}
-a:hover {font-weight: 900;  color: #e91e39;}
-a:active {font-weight: 900;  color: rebeccapurple;}
+.botao a:link {font-weight: 900;  color: #e91e39;}
+.botao a:visited {font-weight: 900;  color: #e91e39;}
+.botao a:hover {font-weight: 900;  color: #e91e39;}
+.botao a:active {font-weight: 900;  color: rebeccapurple;}
 
+.fa-brands {
+  padding: 8px 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.fa-brands:hover {
+  opacity: 0.7;
+}
+.fa-linkedin-in {
+ background: #007bb5;
+ color: white;
+}
+.fa-github {
+  background: #2c4762;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  padding: 8px 7px;
+}
 
 
 /* ************************************* */
