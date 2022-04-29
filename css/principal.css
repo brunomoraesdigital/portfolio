@@ -195,7 +195,7 @@ a, .a-sbmt {
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .fa-brands:hover {
   opacity: 0.7;
@@ -249,17 +249,12 @@ a, .a-sbmt {
 }
 
 .midiaSocial {
-  margin-top: 15px;
+  margin-top: 18px;
   flex-direction: column;
 }
 
 .conjuntoDeLinks {
   width: 100%;
-  border: 1px outset gray;
-  border-radius: 6px;
-  padding: 8px 0px 8px 8px;
-  background-color: rgba(0,0,0,0.2);
-  
 }
 .colunaForm-c {
   display: flex;
