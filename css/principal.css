@@ -18,7 +18,7 @@ body {
   display: flex;
   
 }
-input {
+.esconder {
  display: none;
 }
 .principal { /*main*/
@@ -42,19 +42,19 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   background-position: center;
   position: relative;
 }
-.lbl-sc:nth-child(6) .secao { 
+.lbl-sc:nth-child(2) .secao { 
   background-image: url(../imagens/aguia.jpg);
   }
-  .lbl-sc:nth-child(7) .secao { 
+  .lbl-sc:nth-child(3) .secao { 
   background-image: url(../imagens/habilidades.jpg);
   }
-  .lbl-sc:nth-child(8) .secao {
+  .lbl-sc:nth-child(4) .secao {
   background-image: url(../imagens/trabalhos.jpg);
   }
-  .lbl-sc:nth-child(9) .secao {
+  .lbl-sc:nth-child(5) .secao {
   background-image: url(../imagens/blog.jpg);
   }
-  .lbl-sc:nth-child(10) .secao {
+  .lbl-sc:nth-child(6) .secao {
   background-image: url(../imagens/contato.jpg);
   }
 
@@ -214,6 +214,63 @@ a {
   padding: 8px 7px;
 }
 
+.conjuntoDeCampos {
+  border: 1px outset gray;
+  border-radius: 6px;
+  padding: 8px 0px 8px 16px;
+  background-color: rgba(0,0,0,0.2);
+
+}
+.linhaForm {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 5px;
+}
+.colunaForm-a {
+  width: 28%;
+}
+.colunaForm-b {
+ width: 70%;
+}
+
+.mensagemContato, 
+.assuntoContato,
+.nomeContato, 
+.emailContato
+{
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ultimaLinhaForm {
+  margin-top: 28px;
+}
+.colunaForm-c {
+  width: 100%;
+}
+.submeterForm {
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.midiaSocial {
+  margin-top: 15px;
+  flex-direction: column;
+}
+
+.conjuntoDeLinks {
+  width: 100%;
+  border: 1px outset gray;
+  border-radius: 6px;
+  padding: 8px 0px 8px 8px;
+  background-color: rgba(0,0,0,0.2);
+  
+}
+.ttl-c {
+  text-transform: uppercase;
+}
 
 /* ************************************* */
 /* CONTROLE DE MÍDIAS                    */
