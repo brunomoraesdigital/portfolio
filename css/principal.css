@@ -184,40 +184,30 @@ a, .a-sbmt {
   background-color: #2e2e2e;
 } 
 
-.botao a:link {font-weight: 900;  color: #e91e39;}
-.botao a:visited {font-weight: 900;  color: #e91e39;}
-.botao a:hover {font-weight: 900;  color: #e91e39;}
-.botao a:active {font-weight: 900;  color: rebeccapurple;}
+.botao a:link {
+  font-weight: 900; color: #f2f2f2;}
+.botao a:visited {
+  font-weight: 900; color: #f2f2f2;}
+.botao a:hover {
+  font-weight: 900; color: #e91e39;}
+.botao a:active {
+  font-weight: 900; color: rebeccapurple;}
 
-.fa-brands {
-  /*padding: 8px 10px;
-  font-size: 12px/*20px*/;
-  /*border-radius: 5px;
-  text-decoration: none;*/
-}
-.fa-brands:hover {
-  opacity: 0.7;
-}/*
-.fa-linkedin-in {
- background: #007bb5;
- color: white;
-}
-.fa-github {
-  background: #2c4762;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-  padding: 8px 7px;
-}*/
+.caixaRodapeContato a:link {
+  color: #f2f2f2;}
+.caixaRodapeContato a:visited {
+  color: #f2f2f2;}
+.caixaRodapeContato a:hover {
+  color: #e91e39;}
+.caixaRodapeContato a:active {
+  color: rebeccapurple;}
+
 
 .conjuntoDeCampos {
   border: 1px outset gray;
   border-radius: 6px;
-  padding: 8px 0px 8px 16px;
+  padding: 1px 0px 8px 16px;
   background-color: rgba(0,0,0,0.2);
-
 }
 .linhaForm {
   display: flex;
@@ -262,7 +252,6 @@ a, .a-sbmt {
 .ttl-c {
   text-transform: uppercase;
 }
-
 .caixaRodapeContato {
   display: flex;
   flex-wrap: wrap;
