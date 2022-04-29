@@ -193,12 +193,32 @@ a, .a-sbmt {
 .botao a:active {
   font-weight: 900; color: rebeccapurple;}
 
-.caixaRodapeContato a:link {
+.fa-linkedin-in a:link {
   color: #f2f2f2;}
 .caixaRodapeContato a:visited {
   color: #f2f2f2;}
-.caixaRodapeContato a:hover {
-  color: #e91e39;}
+/******/
+.fa-tiktok:link,
+.fa-tiktok:visited {text-shadow: transparent}
+/*****/
+  
+  
+.fa-linkedin-in:hover,
+.fa-linkedin-in:active {color: #dd4b39;}
+.fa-github:hover,
+.fa-github:active {color: #2c4762;}
+
+.fa-tiktok:hover,
+.fa-tiktok:active {text-shadow: 1px 1px 2px red, -1px -1px 2px cyan;}
+.fa-youtube:hover,
+.fa-youtube:active {color: #bb0000;}
+.fa-dribbble:hover,
+.fa-dribbble:active {color: #ea4c89;}
+.fa-twitter:hover,
+.fa-twitter:active {color: #55ACEE;}
+
+
+
 .caixaRodapeContato a:active {
   color: rebeccapurple;}
 
@@ -206,7 +226,7 @@ a, .a-sbmt {
 .conjuntoDeCampos {
   border: 1px outset gray;
   border-radius: 6px;
-  padding: 1px 0px 8px 16px;
+  padding: 10px 0px 8px 16px;
   background-color: rgba(0,0,0,0.2);
 }
 .linhaForm {
