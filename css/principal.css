@@ -261,6 +261,9 @@ a, .a-sbmt {
   background-color: rgba(0,0,0,0.2);
   
 }
+.colunaForm-c {
+  display: flex;
+}
 .ttl-c {
   text-transform: uppercase;
 }
