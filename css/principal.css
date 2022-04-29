@@ -190,16 +190,15 @@ a, .a-sbmt {
 .botao a:active {font-weight: 900;  color: rebeccapurple;}
 
 .fa-brands {
-  padding: 8px 10px;
-  font-size: 20px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  /*margin-right: 10px;*/
+  /*padding: 8px 10px;
+  font-size: 12px/*20px*/;
+  /*border-radius: 5px;
+  text-decoration: none;*/
+
 }
 .fa-brands:hover {
   opacity: 0.7;
-}
+}/*
 .fa-linkedin-in {
  background: #007bb5;
  color: white;
@@ -212,7 +211,7 @@ a, .a-sbmt {
   background: #bb0000;
   color: white;
   padding: 8px 7px;
-}
+}*/
 
 .conjuntoDeCampos {
   border: 1px outset gray;
@@ -251,6 +250,8 @@ a, .a-sbmt {
 .midiaSocial {
   margin-top: 18px;
   flex-direction: column;
+  background: #2e2e2e;
+  margin: 20px -10px -18px -12px
 }
 
 .conjntoDeLinks {
@@ -269,26 +270,26 @@ a, .a-sbmt {
 }
 .caixaRodapeContato div:nth-child(1) {
   flex: 1 1 50%;
-  padding: 3px;
-  border: 1px solid black;
+  padding: 15px 0 5px 0;
+  /*border: 1px solid black;*/
   display: flex;
   align-content: center;
   justify-content: space-evenly;
 }
 .caixaRodapeContato div:nth-child(2) {
   flex: 1 1 50%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .caixaRodapeContato div:nth-child(3) {
   flex: 1 1 100%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 10px;
+  padding: 5px 18px 12px;
 }
 .caixaRodapeContato div:nth-child(3) p {
   display: flex;
