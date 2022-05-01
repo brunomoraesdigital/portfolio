@@ -169,6 +169,8 @@ a, .a-sbmt {
   border-radius: 11px;
   background-color: #2e2e2e;
   opacity: 90%;
+  font-weight: 900;
+  cursor: pointer;
 }
 .botao i {
   border: 1px solid #f0f0f0;
@@ -184,38 +186,15 @@ a, .a-sbmt {
   background-color: #2e2e2e;
 } 
 
-.botao a:link {
-  font-weight: 900; color: #f2f2f2;}
-.botao a:visited {
-  font-weight: 900; color: #f2f2f2;}
-.botao a:hover {
-  font-weight: 900; color: #e91e39;}
-.botao a:active {
-  font-weight: 900; color: rebeccapurple;}
+.botao a:link {font-weight: 900; color: #f2f2f2;}
+.botao a:visited {font-weight: 900; color: #f2f2f2;}
+.botao a:hover {font-weight: 900; color: #e91e39;}
+.botao a:active {font-weight: 900; color: rebeccapurple;}
 
-.fa-linkedin-in a:link {
-  color: #f2f2f2;}
-.caixaRodapeContato a:visited {
-  color: #f2f2f2;}
-/******/
-.fa-tiktok:link,
-.fa-tiktok:visited {text-shadow: transparent}
-/*****/
-  
-  
-.fa-linkedin-in:hover,
-.fa-linkedin-in:active {color: #dd4b39;}
-.fa-github:hover,
-.fa-github:active {color: #2c4762;}
-
-.fa-tiktok:hover,
-.fa-tiktok:active {text-shadow: 1px 1px 2px red, -1px -1px 2px cyan;}
-.fa-youtube:hover,
-.fa-youtube:active {color: #bb0000;}
-.fa-dribbble:hover,
-.fa-dribbble:active {color: #ea4c89;}
-.fa-twitter:hover,
-.fa-twitter:active {color: #55ACEE;}
+.linkSociais a:link {color: #f2f2f2;}
+.bolinkSociaistao a:hover {color: #e91e39;}
+.linkSociais a:active {color: rebeccapurple;}
+.linkSociais a:visited {color: #f2f2f2;}
 
 
 
@@ -260,7 +239,7 @@ a, .a-sbmt {
   margin-top: 18px;
   flex-direction: column;
   background: #2e2e2e;
-  margin: 20px -10px -18px -12px
+  margin: 20px -3% -18px -3%;
 }
 
 .conjntoDeLinks {
@@ -303,7 +282,11 @@ a, .a-sbmt {
   font-size: 10px;
   margin: 0;
 }
-
+.labelContato {
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 
 
 
