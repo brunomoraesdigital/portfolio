@@ -160,6 +160,7 @@ p {
 }
 a, .a-sbmt {
   /*margin-top: 4px;*/
+  font-family: 'Times New Roman', Times, serif;
 }
 .botao a, .a-sbmt {
   /*margin-top: 4px;*/
@@ -188,9 +189,13 @@ a, .a-sbmt {
 
 .botao a:link {font-weight: 900; color: #f2f2f2;}
 .botao a:visited {font-weight: 900; color: #f2f2f2;}
-.botao a:hover {font-weight: 900; color: #e91e39;}
-.botao a:active {font-weight: 900; color: #e91ee9;}
+.botao a:hover {font-weight: 900; color: goldenrod;}
+.botao a:active {font-weight: 900; color: #e91e39;}
 
+.a-sbmt:link {font-weight: 900; color: #f2f2f2;}
+.a-sbmt:visited {font-weight: 900; color: #f2f2f2;}
+.a-sbmt:hover {font-weight: 900; color: goldenrod;}
+.a-sbmt:active {font-weight: 900; color: #e91e39;}
 
 .caixaLinkSociais a {font-weight: normal;}
 .caixaLinkSociais a:link {color: #f2f2f2;}
