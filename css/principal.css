@@ -188,6 +188,8 @@ a, .a-sbmt {
 
 .botao a:link {font-weight: 900; color: #f2f2f2;}
 .botao a:visited {font-weight: 900; color: #f2f2f2;}
+.botao a:hover {font-weight: 900; color: #e91e39;}
+.botao a:active {font-weight: 900; color: #e91ee9;}
 
 
 .caixaLinkSociais a {font-weight: normal;}
@@ -203,8 +205,12 @@ a, .a-sbmt {
 .caixaLinkSociais .fa-youtube:hover { color: #bb0000; position: relative; display: flex; align-items: center; justify-content: center;}
 .caixaLinkSociais .fa-youtube:hover::before {z-index: 2;}
 .caixaLinkSociais .fa-youtube:hover::after {content: ""; position: absolute; width: 60%; height:60%; border-radius: 50%; background-color: white;}
-.caixaLinkSociais .fa-dribbble:hover {color: #ea4c89;}
+.caixaLinkSociais .fa-dribbble:hover {color: #ea4c89; position: relative; display: flex; align-items: center; justify-content: center;}
+.caixaLinkSociais .fa-dribbble:hover::before {z-index: 2;}
+.caixaLinkSociais .fa-dribbble:hover::after {content: ""; position: absolute; width: 80%; height:80%; border-radius: 50%; background-color: lightpink;}
 .caixaLinkSociais .fa-twitter:hover {color: #55ACEE;}
+.caixaLinkSociais .fa-behance:hover {color: #0057ff;}
+.caixaLinkSociais .fa-pinterest-p:hover {color: #bb0000;}
 
 
 .conjuntoDeCampos { 
