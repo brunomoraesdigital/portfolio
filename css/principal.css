@@ -291,6 +291,9 @@ a, .a-sbmt {
 .ttl-c {
   text-transform: uppercase;
 }
+.ttl-blog {
+  text-transform: capitalize;
+}
 .caixaRodapeContato {
   display: flex;
   flex-wrap: wrap;
