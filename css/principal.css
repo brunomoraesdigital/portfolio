@@ -16,7 +16,6 @@ body {
   height:100%;
   position: fixed;
   display: flex;
-  
 }
 .esconder {
  display: none;
@@ -239,6 +238,14 @@ a, .a-sbmt {
  display: flex;
  justify-content: center;
 }
+
+
+.corpo p strong {
+  color: goldenrod;
+  font-weight: 700;
+}
+
+/*************************/
 @media only screen and (max-width: 1023px) {
   .colunaForm-b {
     width: 90%;
