@@ -125,7 +125,7 @@
 <h2 class="ttl-a">Contato</h2>
 <h2 class="ttl-b">Contato</h2></header>
         <div class="corpo">
-<form action="/action_page.php">
+<form action="https://formsquash.io/f/i8pNRGfupfdICXwnIoRl" method="POST">
   <fieldset class="conjuntoDeCampos">
     <!--<legend class="legendaForm">Contate-me</legend>-->
     
@@ -139,7 +139,7 @@
         <input 
         id="nomeContato" 
         type="text" 
-        name="nomeContato"
+        name="Nome"
         class="nomeContato">
       </div>
     </div>
@@ -154,7 +154,7 @@
         <input 
         id="emailContato" 
         type="email" 
-        name="emailContato"
+        name="E-mail"
         class="emailContato">
       </div>
     </div>
@@ -168,7 +168,7 @@
       <div class="colunaForm-b">
         <select 
         id="assuntoContato" 
-        name="assuntoContato"
+        name="Assunto"
         class="assuntoContato"
         >
 <option value="Comentário" selected>
@@ -192,7 +192,7 @@
       <div class="colunaForm-b">
         <textarea 
         id="mensagemContato" 
-        name="mensagemContato" 
+        name="Mensagem"
         class="mensagemContato" 
         rows="2"
         ></textarea>
@@ -202,8 +202,11 @@
       <div class="colunaForm-c">
         <div>
           <!-- Não visualizável -->
+ <!-- adicione esse campo para incluir proteções adicionais contra spam -->
+ <input type="hidden" name="_gotcha">
+          <!-- botao submiter-->
           <div class="esconder">
-<input id="submeteForm" type="submit" value="Submit" name="submeteForm">
+<input id="submeteForm" type="submit" value="Submit">
           </div>
           <!-- Não visualizável-->
 <div class="botao">
