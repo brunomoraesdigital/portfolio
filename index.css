@@ -4,3 +4,8 @@
 @import url(css/secao.css);
 @import url(css/sobre.css);
 @import url(css/habilidades.css);
+
+
+.disclaimer {
+    display:none;
+}
