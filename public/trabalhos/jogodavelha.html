@@ -1,0 +1,91 @@
+// Variáveis para controlar o jogo
+var jogador = document.querySelector("#player");
+var game = document.getElementById("game");
+var cells = game.getElementsByTagName("td");
+var currentPlayer = "X";
+var gameOver = false;
+var moves = 0;
+var winCombinations = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+];
+var cellElements = [...cells];
+var clickedCell = null; // variável para armazenar a célula clicada
+
+// Adicionando evento de clique e de passar o mouse nas células da tabela
+cellElements.forEach(function(cell) {
+  cell.addEventListener("click", function() {
+    if (clickedCell === cell && !gameOver) { // verifica se a célula clicada é a mesma que está sendo exibida
+      cell.textContent = currentPlayer;
+      moves++;
+      checkForWin();
+      checkForDraw();
+      togglePlayer();
+      clickedCell = null; // reseta a variável para indicar que nenhum símbolo está sendo exibido
+    }
+  });
+  
+  cell.addEventListener('mouseover', () => {
+    if (!gameOver && cell.textContent === "" && clickedCell === null) { // verifica se a célula ainda está vazia e nenhum símbolo está sendo exibido
+      cell.textContent = currentPlayer;
+      clickedCell = cell;
+    }
+  });
+  
+  cell.addEventListener('mouseout', () => {
+    if (!gameOver && clickedCell === cell) { // verifica se o símbolo exibido é o mesmo que foi adicionado com o mouseover
+      cell.textContent = "";
+      clickedCell = null;
+    }
+  });
+});
+
+// Adicionando botão de reinício
+var restartButton = document.getElementById('restart-button');
+restartButton.addEventListener('click', function() {
+  // Reinicia o jogo
+  currentPlayer = "X";
+  gameOver = false;
+  moves = 0;
+  cellElements.forEach(function(cell) {
+    cell.textContent = "";
+  });
+  restartButton.style.visibility= 'hidden'; // Esconde o botão de reinício novamente
+  jogador.innerHTML = `${currentPlayer}`;
+});
+
+// Função para alternar jogadores
+function togglePlayer() {
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  jogador.innerHTML = `${currentPlayer}`;
+}
+
+// Função para verificar vitória
+function checkForWin() {
+  winCombinations.forEach(function(combination) {
+    if (
+      cells[combination[0]].textContent === currentPlayer &&
+      cells[combination[1]].textContent === currentPlayer &&
+      cells[combination[2]].textContent === currentPlayer
+    ) {
+      gameOver = true;
+      restartButton.style.visibility= 'visible'; // Mostra o botão de reinício
+      alert("O Jogador " + currentPlayer + " venceu!");
+    }
+  });
+}
+
+// Função para verificar empate
+function checkForDraw() {
+  if (!gameOver && moves === 9) {
+    gameOver = true;
+    restartButton.style.visibility= 'visible'; // Mostra o botão de reinício
+    alert("Empate!");
+  }
+}
