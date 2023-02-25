@@ -344,7 +344,7 @@ a, .a-sbmt {
 /* ************************************* */
 /* CONTROLE DE MÍDIAS                    */
 /* ************************************* */
-@media only screen and (max-width: 1023px )
+@media only screen and (/*max-width: 1023px*/orientation: portrait)
 {
   .principal {
   flex-direction: column;/*aqui*/
@@ -375,7 +375,7 @@ a, .a-sbmt {
   background-position: 75% 30%;
   }
 }
-@media only screen and (min-width: 1024px )
+@media only screen and (/*min-width: 1024px*/orientation: landscape)
 {
   .principal {
   flex-direction: row;/*aqui*/
