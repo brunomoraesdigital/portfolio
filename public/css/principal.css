@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
-
 html {
   /*
   width:100%;
@@ -79,7 +78,6 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   flex-direction: column;
   font-family: 'Lato', sans-serif;
 }
-
 
 /* ***************************** */
 /* titulos e paragrafos.         */
@@ -336,12 +334,12 @@ h2 {
       flex-direction: row;/*aqui*/
     }  
     .lbl-sc {
-      /*flex: 0 0 10%;*//*aqui*/
-      width: 10%;
+      flex: 0 0 10%;/*aqui*/
+      /*width: 10%;*/
     }  
     .sec-ativa {
-      /*flex: 0 0 60%;*//*aqui*/
-      width: 60%;
+      flex: 0 0 60%;/*aqui*/
+      /*width: 60%;*/
     }  
     .cabecalho {
       position: relative;
