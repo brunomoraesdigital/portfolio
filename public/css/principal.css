@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
+
 html {
   /*
   width:100%;
@@ -15,10 +16,7 @@ body {
   width:100%;
   height:100%;
   position: fixed;
-  display: flex;
-}
-.esconder {
- display: none;
+  display: flex; /**/
 }
 .principal { /*main*/
   flex: 0 0 100%;
@@ -27,7 +25,9 @@ body {
 .lbl-sc { /*label*/
   display: flex;
 }
-
+.esconder { /*esconde os botões de radio*/
+ display: none;
+}
 /* ************************************* */
 /* BACKGROUND DAS SEÇÕES                 */
 /* ************************************* */
@@ -35,29 +35,19 @@ body {
 label:nth-child(even) section{background-color: lightblue;}
 label:nth-child(odd) section{background-color: lightseagreen;}
 */
-.lbl-sc .secao { 
+.secao { 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
 }
-.lbl-sc:nth-child(2) .secao { 
-  background-image: url(../imagens/aguia.jpg);
-  }
-  .lbl-sc:nth-child(3) .secao { 
-  background-image: url(../imagens/habilidades.jpg);
-  }
-  .lbl-sc:nth-child(4) .secao {
-  background-image: url(../imagens/trabalhos.jpg);
-  }
-  .lbl-sc:nth-child(5) .secao {
-  background-image: url(../imagens/blog.jpg);
-  }
-  .lbl-sc:nth-child(6) .secao {
-  background-image: url(../imagens/contato.jpg);
-  }
+.lbl-sc:nth-child(2) .secao {background-image: url(../imagens/aguia.jpg);}
+.lbl-sc:nth-child(3) .secao {background-image: url(../imagens/habilidades.jpg);}
+.lbl-sc:nth-child(4) .secao {background-image: url(../imagens/trabalhos.jpg);}
+.lbl-sc:nth-child(5) .secao {background-image: url(../imagens/blog.jpg);}
+.lbl-sc:nth-child(6) .secao {background-image: url(../imagens/contato.jpg);}
 
-.lbl-sc .secao::after { 
+.secao::after { 
   content: "";
   width: 100%;
   height: 100%;
@@ -67,31 +57,12 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   opacity: 50%;
   position: absolute;
 }
+.cabecalho, .corpo, .rodape { /*ajusta por cima*/
+  z-index: 2;
+}
 /* ************************************* */
 /* SEÇÕES                                */
 /* ************************************* */
-.secao {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  
-
-  color: #f2f2f2;
-  
-  display: flex;
-  flex-direction: column;
-  
-  /*transition: all 0.35s ease;*/
-
-  overflow: hidden;
-  border: 0.0625rem solid black;
-}
-.sec-ativa .secao {
-  justify-content: flex-end;
-  padding: 1rem;
-  cursor: default;
-}
-
 /* ESCONDE POR PADRÃO AS SEÇÕES */
 .corpo, .rodape, .ttl-a {display: none;}
 /* MOSTRA AS SECÕES AO CLICAR */
@@ -101,30 +72,15 @@ label:nth-child(odd) section{background-color: lightseagreen;}
 .sec-ativa .ttl-b {display: none;}
 
 /************************/
-
-/* ALINHA O CONTEUDO DA GUIA DA SEÇÃO NO CENTRO*/
 .cabecalho { /*header*/
-  display: flex;
-  justify-content: center;
   text-transform: uppercase; 
-  z-index: 2;
-}
-/* AO ABRIR A SEÇÃO, AJUSTA O CONTEÚDO A ESQUERDA*/
-.sec-ativa .cabecalho {
-  justify-content: flex-start;
 }
 .corpo { /*div*/
   flex-direction: column;
   font-family: 'Lato', sans-serif;
-  z-index: 2;
 }
-/*.sec-ativa .corpo {
- } */
-.rodape { /*footer*/
-  z-index: 2;
-}
-/*.sec-ativa .rodape {
-}*/
+
+
 /* ***************************** */
 /* titulos e paragrafos.         */
 /* ***************************** */
@@ -135,37 +91,30 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
-
 h2 {
   color: white;
   font-weight: 700;
   font-size: 1.5625rem;
 }
-
 .sec-ativa h2 {
   margin-bottom: 0.5rem;
   font-size: 1.5625rem;
 }
-
 h3 {
   font-size: 1.13rem;
   color: white;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-
 p {
   margin-bottom: 0.5rem;
   line-height: 1.1;
   font-size: 1.13rem;
 }
 a, .a-sbmt {
-  /*margin-top: 0.25rem;*/
   font-family: 'Times New Roman', Times, serif;
 }
-
 .botao a, .a-sbmt {
-  /*margin-top: 0.25rem;*/
   text-transform: uppercase;
   display: flex;
   padding: 0.1875rem 0.1875rem;
@@ -175,7 +124,6 @@ a, .a-sbmt {
   font-weight: 900;
   cursor: pointer;
 }
-
 .botao i {
   border: 0.0625rem solid #f0f0f0;
   font-weight: 900;
@@ -183,15 +131,12 @@ a, .a-sbmt {
   padding: 0.5rem;
   border-right:none;
 }
-
 .botao span {
   padding: 0.5rem;
   border: 0.0625rem solid #f0f0f0;
   border-radius: 0 0.625rem 0.625rem 0;
   background-color: #2e2e2e;
 }
-
-
 .botao a:link {font-weight: 900; color: #f2f2f2;}
 .botao a:visited {font-weight: 900; color: #f2f2f2;}
 .botao a:hover {font-weight: 900; color: goldenrod;}
@@ -222,14 +167,12 @@ a, .a-sbmt {
 .caixaLinkSociais .fa-behance:hover {color: #0057ff;}
 .caixaLinkSociais .fa-pinterest-p:hover {color: #bb0000;}
 
-
 .conjuntoDeCampos { 
   border: 0.0625rem outset gray;
   border-radius: 0.375rem;
   padding: 0.625rem 0 0.5rem 1rem;
   background-color: rgba(0,0,0,0.2);
 }
-
 .linhaForm {
   display: flex;
   justify-content: space-between;
@@ -237,7 +180,6 @@ a, .a-sbmt {
   height: fit-content;
   margin-bottom: 0.3125rem;
 }
-
 .colunaForm-a {
   width: 28%;
 }
@@ -246,34 +188,16 @@ a, .a-sbmt {
  display: flex;
  justify-content: center;
 }
-
-
 .corpo p strong {
   color: goldenrod;
   font-weight: 700;
 }
 
 /*************************/
-@media only screen and (max-width: 1023px) {
-  .colunaForm-b {
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .colunaForm-b {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .colunaForm-b {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 375px ) {
-  .colunaForm-b {
-    width: 60%;
-  }
-}
+@media only screen and (max-width:1023px) {.colunaForm-b {width: 90%;}}
+@media only screen and (max-width: 768px) {.colunaForm-b {width: 80%;}}
+@media only screen and (max-width: 425px) {.colunaForm-b {width: 70%;}}
+@media only screen and (max-width: 375px) {.colunaForm-b {width: 60%;}}
 
 .mensagemContato, 
 .assuntoContato,
@@ -284,11 +208,9 @@ a, .a-sbmt {
   padding: 0.3125rem;
   border-radius: 0.3125rem;
 }
-
 .ultimaLinhaForm {
   margin-top: 0.625rem;
 }
-
 .midiaSocial {
   margin-top: 1.13rem;
   flex-direction: column;
@@ -296,7 +218,6 @@ a, .a-sbmt {
   margin: 1.25rem -10% -1.13rem -10%;
   box-shadow: -0.0625rem -0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
 }
-
 .conjntoDeLinks {
   width: 100%;
 }
@@ -317,7 +238,6 @@ a, .a-sbmt {
   flex: 1 1 100%;
   padding-top: 0.9375rem;
   padding-bottom: 0.3125rem;
-  /*border: 0.0625rem solid black;*/
   display: flex;
   align-content: center;
   justify-content: space-evenly;
@@ -328,7 +248,6 @@ a, .a-sbmt {
 }
 .caixaRodapeContato div:nth-child(2) {
   flex: 1 1 100%;
-  /*border: 0.0625rem solid black;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,92 +265,117 @@ a, .a-sbmt {
   letter-spacing: 0.125rem;
 }
 
-
-
-
 /* ************************************* */
 /* CONTROLE DE MÍDIAS                    */
 /* ************************************* */
-@media only screen and (orientation: portrait)
-{
+.secao {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #f2f2f2;
+  display: flex;
+  /*transition: all 0.35s ease;*/
+  overflow: hidden;
+  border: 0.0625rem solid black;
+}
+.sec-ativa .secao {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 1rem;
+  cursor: default;
+}
+.cabecalho {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+h2 {  
+  width: 100%;
+}
+
+@media only screen and (orientation: portrait) {
   .principal {
-  flex-direction: column;/*aqui*/
+    flex-direction: column;/*aqui*/
   }
   .lbl-sc {
-  flex: 0 0 7.5%;/*aqui*/
-  }
-  .secao {
-    justify-content: center;
+    flex: 0 0 7.5%;/*aqui*/
   }
   .sec-ativa {
-  flex: 0 0 70%;
-  color: red;
+    flex: 0 0 70%;/*aqui*/
+    color: red;
+  }
+  .cabecalho {
+    align-items: center;
+    
+  }
+  .sec-ativa .cabecalho {
+    height: fit-content;
+  }
+  h2 {
+    text-align: center;
   }
   .lbl-sc:nth-child(6) .secao { /*sobre*/
-  background-position: 50% 40%;
-  }
-  .lbl-sc:nth-child(7) .secao { /*habilidades*/
-  background-position: 65% 24%;
-  }
-  .lbl-sc:nth-child(8) .secao { /*trabalhos*/
-    background-position: center;
-  }
-  .lbl-sc:nth-child(9) .secao { /*blog*/
-    background-position: center;
-  }
-  .lbl-sc:nth-child(10) .secao { /*contato*/
-  background-position: 75% 30%;
-  }
+    background-position: 50% 40%;
+    }
+    .lbl-sc:nth-child(7) .secao { /*habilidades*/
+    background-position: 65% 24%;
+    }
+    .lbl-sc:nth-child(8) .secao { /*trabalhos*/
+      background-position: center;
+    }
+    .lbl-sc:nth-child(9) .secao { /*blog*/
+      background-position: center;
+    }
+    .lbl-sc:nth-child(10) .secao { /*contato*/
+    background-position: 75% 30%;
+    }
 }
-@media only screen and (orientation: landscape)
-{
+@media only screen and (orientation: landscape) {
   .principal {
-  flex-direction: row;/*aqui*/
-  }
-  .lbl-sc {
-  flex: 0 0 10%;/*aqui*/
-  }
-  .secao {
-    justify-content: flex-end;
-  }
-  .sec-ativa {
-  flex: 0 0 60%;
-  color: gold;
-  }
-  .lbl-sc:nth-child(6) .secao { /*sobre*/
-  background-position: 46% 40%;
-  }
-  .lbl-sc:nth-child(7) .secao { /*habilidades*/
-  background-position: 59% 24%;
-  }
-  .lbl-sc:nth-child(8) .secao { /*trabalhos*/
-  background-position: 60% 0%;
-  }
-  .lbl-sc:nth-child(9) .secao { /*blog*/
-  background-position: center;
-  }
-  .lbl-sc:nth-child(10) .secao { /*contato*/
-  background-position: 64% 30%;
-  }
-
-
-  .secao .cabecalho {
-    transform: translate(-1.25rem, -5.31rem) rotate(-90deg);
-  }
-  .sec-ativa .secao .cabecalho {
-    transform: translate(0px, 0%) rotate(0deg);
-  }
-/**/
-.secao .cabecalho {
-  position: relative;
-  justify-content: flex-start;
+      flex-direction: row;/*aqui*/
+    }  
+    .lbl-sc {
+      /*flex: 0 0 10%;*//*aqui*/
+      width: 10%;
+    }  
+    .sec-ativa {
+      /*flex: 0 0 60%;*//*aqui*/
+      width: 60%;
+    }  
+    .cabecalho {
+      position: relative;
+    }  
+    .sec-ativa .cabecalho {
+      width: 100%;
+      height: fit-content;
+    }  
+    h2 {
+      transform: rotate(-90deg);
+      position: absolute;
+      bottom: 12%;
+    }  
+    .sec-ativa h2 {
+      width: 100%;
+      transform: rotate(0deg);
+      position: initial;
+    }
+    .lbl-sc:nth-child(6) .secao { /*sobre*/
+      background-position: 46% 40%;
+      }
+      .lbl-sc:nth-child(7) .secao { /*habilidades*/
+      background-position: 59% 24%;
+      }
+      .lbl-sc:nth-child(8) .secao { /*trabalhos*/
+      background-position: 60% 0%;
+      }
+      .lbl-sc:nth-child(9) .secao { /*blog*/
+      background-position: center;
+      }
+      .lbl-sc:nth-child(10) .secao { /*contato*/
+      background-position: 64% 30%;
+      }
 }
-  .ttl-b {
-    position: absolute;
-  }
-
-}
-
 @media only screen and (max-height: 420px)
 {
   html {
