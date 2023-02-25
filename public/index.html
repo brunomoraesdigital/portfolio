@@ -273,6 +273,31 @@
       <!-- ----- -->
 
       <script>
+function detectNavigationBar() {
+  // Obter a altura da tela em pixels
+  var screenHeight = window.screen.height;
+
+  // Obter a altura da janela em pixels
+  var windowHeight = window.innerHeight;
+
+  // Calcular a diferença entre a altura da tela e a altura da janela
+  var navBarHeight = screenHeight - windowHeight;
+
+  // Exibir os valores obtidos
+  alert("Altura da tela: " + screenHeight + "px" +
+    "\nAltura da janela: " + windowHeight + "px" +
+    "\nDiferença entre a altura da tela e a altura da janela: " + navBarHeight + "px");
+
+  // Verificar se as barras de navegação estão visíveis
+  if (navBarHeight > 0) {
+    alert("As barras de navegação estão visíveis.");
+  } else {
+    alert("As barras de navegação não estão visíveis.");
+  }
+}
+
+// Executar a função quando a página é carregada
+window.addEventListener("load", detectNavigationBar);
 
       </script>
       
