@@ -118,13 +118,13 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   font-family: 'Lato', sans-serif;
   z-index: 2;
 }
-.sec-ativa .corpo {
- } 
+/*.sec-ativa .corpo {
+ } */
 .rodape { /*footer*/
   z-index: 2;
 }
-.sec-ativa .rodape {
-}
+/*.sec-ativa .rodape {
+}*/
 /* ***************************** */
 /* titulos e paragrafos.         */
 /* ***************************** */
