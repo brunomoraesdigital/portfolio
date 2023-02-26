@@ -335,12 +335,13 @@ h2 {
     }  
     .lbl-sc {
       flex: 0 0 10%;/*aqui*/
-      /*width: 10%;*/
+      /*transition: all 0.35s ease-in;*/
     }  
     .sec-ativa {
       flex: 0 0 60%;/*aqui*/
-      /*width: 60%;*/
+      /*transition: all 0.35s ease-out;*/
     }  
+
     .cabecalho {
       position: relative;
     }  
