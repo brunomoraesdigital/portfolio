@@ -27,6 +27,40 @@ body {
 .esconder { /*esconde os botões de radio*/
  display: none;
 }
+/**********************************/
+.precarregamento {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.precarregamento p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2.7rem;
+}
+.precarregamento p span:nth-child(2) {
+  width: 1.1rem; 
+}
+#dots {
+  animation: dots 1s infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+
 /* ************************************* */
 /* BACKGROUND DAS SEÇÕES                 */
 /* ************************************* */
