@@ -138,12 +138,12 @@ a, .a-sbmt {
 }
 .botao a:link {font-weight: 900; color: #f2f2f2;}
 .botao a:visited {font-weight: 900; color: #f2f2f2;}
-.botao a:hover {font-weight: 900; color: goldenrod;}
+.botao a:hover {font-weight: 900; color: goldenrod;transition: color 0.35s ease;}
 .botao a:active {font-weight: 900; color: #e91e39;}
 
 .a-sbmt:link {font-weight: 900; color: #f2f2f2;}
 .a-sbmt:visited {font-weight: 900; color: #f2f2f2;}
-.a-sbmt:hover {font-weight: 900; color: goldenrod;}
+.a-sbmt:hover {font-weight: 900; color: goldenrod;transition: color 0.35s ease;}
 .a-sbmt:active {font-weight: 900; color: #e91e39;}
 
 .caixaLinkSociais a {font-weight: normal;}
@@ -273,7 +273,6 @@ a, .a-sbmt {
   cursor: pointer;
   color: #f2f2f2;
   display: flex;
-  /*transition: all 0.35s ease;*/
   overflow: hidden;
   border: 0.0625rem solid black;
 }
