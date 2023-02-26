@@ -55,6 +55,7 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   background-color: #2e2e2e;
   opacity: 50%;
   position: absolute;
+  pointer-events: none; /* Permite que o mouse passe através do pseudo-elemento */
 }
 .cabecalho, .corpo, .rodape { /*ajusta por cima*/
   z-index: 2;
@@ -352,7 +353,7 @@ h2 {
       transform: rotate(-90deg);
       position: absolute;
       bottom: 12%;
-    }  
+    } 
     .sec-ativa h2 {
       width: 100%;
       transform: rotate(0deg);
@@ -372,6 +373,13 @@ h2 {
       }
       .lbl-sc:nth-child(6) .secao { /*contato*/
       background-position: center;
+      }
+      .secao:hover h2 {
+        color: goldenrod;
+        transition: color 0.3s ease;
+      }
+      .sec-ativa .secao:hover h2 {
+        color: white;
       }
 }
 @media only screen and (max-height: 420px)
