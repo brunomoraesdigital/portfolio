@@ -5,6 +5,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 
+  Configuração necessária para compatibilidade com serviços externos como FormSubmit.
+  Previne problemas de bloqueio de redirecionamento em alguns navegadores.
+-->
+  <meta name="referrer" content="no-referrer-when-downgrade">
   
   <title>BRUNO MORAES - Portfólio</title>
   <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
@@ -136,125 +142,120 @@
     <label class="lbl-sc" for="contato">
       <section class="secao">
         <header class="cabecalho">
-<h2 class="ttl-a">Contato</h2>
-<h2 class="ttl-b">Contato</h2></header>
+          <h2 class="ttl-a">Contato</h2>
+          <h2 class="ttl-b">Contato</h2>
+        </header>
         <div class="corpo">
-          <p>Se você tiver alguma dúvida ou apenas quiser dizer olá, sinta-se à vontade para entrar em contato comigo. Abaixo estão algumas das minhas páginas sociais:</p>
-<form action="https://formsquash.io/f/i8pNRGfupfdICXwnIoRl" method="POST">
-  <fieldset class="conjuntoDeCampos">
-    <!--<legend class="legendaForm">Contate-me</legend>-->
+          <p>Se você tiver alguma dúvida ou apenas quiser dizer olá, sinta-se à vontade para entrar em contato comigo.
+            Abaixo estão algumas das minhas páginas sociais:</p>
+          <form action="https://formsubmit.co/brunomoraes.dev@gmail.com" method="POST"> <!-- https://formsubmit.co/ -->
+            <!-- Configurações FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://bmfolio.web.app/obrigado.html">
+            <input type="hidden" name="_subject" value="Contato do Portfólio - {Assunto}">
+            <input type="text" name="_honey" style="display:none">
     
-    <div class="linhaForm">
-      <div class="colunaForm-a">
-        <label for="nomeContato" class="labelContato">
-          Nome:
-        </label>
-      </div>
-      <div class="colunaForm-b">
-        <input 
-        id="nomeContato" 
-        type="text" 
-        name="Nome"
-        class="nomeContato">
-      </div>
-    </div>
+            <input type="hidden" name="_autoresponse"
+              value="Obrigado pelo contato! Recebi sua mensagem e responderei em breve.">
     
-    <div class="linhaForm">
-      <div class="colunaForm-a">
-        <label for="emailContato" class="labelContato">
-          E-mail:
-        </label>
-      </div>
-      <div class="colunaForm-b">
-        <input 
-        id="emailContato" 
-        type="email" 
-        name="E-mail"
-        class="emailContato">
-      </div>
-    </div>
+            <fieldset class="conjuntoDeCampos">
+              <!--<legend class="legendaForm">Contate-me</legend>-->
     
-    <div class="linhaForm">
-      <div class="colunaForm-a">
-        <label for="assuntoContato" class="labelContato">
-          Assunto:
-        </label>
-      </div>
-      <div class="colunaForm-b">
-        <select 
-        id="assuntoContato" 
-        name="Assunto"
-        class="assuntoContato"
-        >
-<option value="Comentário" selected>
-  Comentário
-</option>
-<option value="Parceria">Parceria</option>
-<option value="Dúvida">Dúvida</option>
-<option value="Sugestão">Sugestão</option>
-<option value="Crítica">Crítica</option>
-<option value="Outro">Outro</option>
-        </select>
-      </div>
-    </div>
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="nomeContato" class="labelContato">
+                    Nome:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <input id="nomeContato" type="text" name="Nome" class="nomeContato" required>
+                </div>
+              </div>
     
-    <div class="linhaForm">
-      <div class="colunaForm-a">
-        <label for="mensagemContato" class="labelContato">
-          Mensagem:
-        </label>
-      </div>
-      <div class="colunaForm-b">
-        <textarea 
-        id="mensagemContato" 
-        name="Mensagem"
-        class="mensagemContato" 
-        rows="2"
-        ></textarea>
-      </div>
-    </div>
-    <div class="linhaFor ultimaLinhaForm">
-      <div class="colunaForm-c">
-        <div>
-          <!-- Não visualizável -->
- <!-- adicione esse campo para incluir proteções adicionais contra spam -->
- <input type="hidden" name="_gotcha">
-          <!-- botao submiter-->
-          <div class="esconder">
-<input id="submeteForm" type="submit" value="Submit">
-          </div>
-          <!-- Não visualizável-->
-<div class="botao">
-<label for="submeteForm" class="a-sbmt">
-<i class="fa-solid fa-envelope"></i>
-<span>Enviar</span>
-</label>
-</div>
-        </div>
-      </div>
-    </div>
-   
-  </fieldset>
-</form>
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="emailContato" class="labelContato">
+                    E-mail:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <input id="emailContato" type="email" name="E-mail" class="emailContato" required>
+                </div>
+              </div>
+    
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="assuntoContato" class="labelContato">
+                    Assunto:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <select id="assuntoContato" name="Assunto" class="assuntoContato" required>
+                    <option value="Comentário" selected>
+                      Comentário
+                    </option>
+                    <option value="Parceria">Parceria</option>
+                    <option value="Dúvida">Dúvida</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+    
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="mensagemContato" class="labelContato">
+                    Mensagem:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <textarea id="mensagemContato" name="Mensagem" class="mensagemContato" rows="2" required></textarea>
+                </div>
+              </div>
+              <div class="linhaFor ultimaLinhaForm">
+                <div class="colunaForm-c">
+                  <div>
+                    <!-- Não visualizável -->
+                    <!-- adicione esse campo para incluir proteções adicionais contra spam -->
+                    <input type="hidden" name="_gotcha">
+                    <!-- botao submiter-->
+                    <div class="esconder">
+                      <input id="submeteForm" type="submit" value="Submit">
+                    </div>
+                    <!-- Não visualizável-->
+                    <div class="botao">
+                      <label for="submeteForm" class="a-sbmt">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Enviar</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            </fieldset>
+          </form>
         </div>
         <footer class="rodape midiaSocial">
-<div class="caixaRodapeContato">
-  <div class="caixaLinkSociais">   
-  <a href="#" class="fa-brands fa-linkedin-in"></a>
-  <a href="#" class="fa-brands fa-github"></a>
-  <a href="#" class="fa-brands fa-tiktok"></a>
-  <a href="#" class="fa-brands fa-youtube"></a>
-  <a href="#" class="fa-brands fa-dribbble"></a>
-  <a href="#" class="fa-brands fa-twitter"></a>
-  <a href="#" class="fa-brands fa-behance"></a>
-  <a href="#" class="fa-brands fa-pinterest-p"></a>
-  </div>
-
-  <div>
-  <p>Copyrightb&copy 2019~2023 Bruno Moraes.</p>
-  <p>Todos os direitos reservados.</p>
-  </div>
-</div>    
+          <div class="caixaRodapeContato">
+            <div class="caixaLinkSociais">
+              <a href="https://www.linkedin.com/in/bruno-moraes-704728145/" class="fa-brands fa-linkedin-in" target="_blank"
+                rel="noopener noreferrer"></a>
+              <a href="" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-tiktok" target="_blank" rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-youtube" target="_blank" rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-twitter" target="_blank" rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-behance" target="_blank" rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-pinterest-p" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+    
+            <div>
+              <p>Copyrightb&copy 2019~2023 Bruno Moraes.</p>
+              <p>Todos os direitos reservados.</p>
+            </div>
+          </div>
         </footer>
       </section>
     </label>
