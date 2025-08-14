@@ -18,12 +18,21 @@ function updateDots() {
 let intervalId = setInterval(updateDots, 333);
 
 /*loader*/
-
 function esconderSobreposicao() {
-  // LOADER
   const sobreposicao = document.querySelector("#precarregamento");
-  window.addEventListener("load", function () {
-    sobreposicao.style.display = "none";
-  })
+  const tempoMinimo = 1000; // 1 segundo em milissegundos
+  const tempoInicio = Date.now();
+
+  window.addEventListener("load", function() {
+    const tempoRestante = tempoMinimo - (Date.now() - tempoInicio);
+    
+    if (tempoRestante > 0) {
+      setTimeout(() => {
+        sobreposicao.style.display = "none";
+      }, tempoRestante);
+    } else {
+      sobreposicao.style.display = "none";
+    }
+  });
 }
 esconderSobreposicao();

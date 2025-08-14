@@ -1,14 +1,14 @@
 // SANFONA
-var lbl = document.getElementsByClassName("lbl-sc");
+var label = document.getElementsByClassName("label-secao");
 var i;
 var j;
-for (i = 0; i < lbl.length; i++) 
+for (i = 0; i < label.length; i++) 
 {
-  lbl[i].addEventListener("click", function() 
+  label[i].addEventListener("click", function() 
   {
-    for (j = 0; j < lbl.length; j++) 
+    for (j = 0; j < label.length; j++) 
     {
-      lbl[j].classList.remove('sec-ativa');
+      label[j].classList.remove('sec-ativa');
     }
     this.classList.toggle("sec-ativa");
     //===================================
