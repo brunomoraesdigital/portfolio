@@ -147,6 +147,11 @@ p {
 a, .a-sbmt {
   font-family: 'Times New Roman', Times, serif;
 }
+.botao {
+  width: fit-content;
+}
+
+
 .botao a, .a-sbmt {
   text-transform: uppercase;
   display: flex;
@@ -156,29 +161,70 @@ a, .a-sbmt {
   opacity: 90%;
   font-weight: 900;
   cursor: pointer;
+  height: 3rem;
 }
+
 .botao i {
   border: 0.0625rem solid #f0f0f0;
   font-weight: 900;
   border-radius: 0.625rem 0 0 0.625rem;
-  padding: 0.5rem;
+  width: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
   border-right:none;
 }
 .botao span {
-  padding: 0.5rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.8rem;
   border: 0.0625rem solid #f0f0f0;
   border-radius: 0 0.625rem 0.625rem 0;
   background-color: #2e2e2e;
 }
-.botao a:link {font-weight: 900; color: #f2f2f2;}
+/*.botao a:link {font-weight: 900; color: #f2f2f2;}
 .botao a:visited {font-weight: 900; color: #f2f2f2;}
-.botao a:hover {font-weight: 900; color: goldenrod;transition: color 0.35s ease;}
-.botao a:active {font-weight: 900; color: #e91e39;}
+.botao a:hover {font-weight: 900; color: goldenrod; transition: color 0.35s ease;}
+.botao a:active {font-weight: 900; color: #e91e39;}*/
 
-.a-sbmt:link {font-weight: 900; color: #f2f2f2;}
-.a-sbmt:visited {font-weight: 900; color: #f2f2f2;}
-.a-sbmt:hover {font-weight: 900; color: goldenrod;transition: color 0.35s ease;}
-.a-sbmt:active {font-weight: 900; color: #e91e39;}
+.botao a:link i,
+.botao a:link span {
+  border-color:#f2f2f2; font-weight: 900; color: #f2f2f2; ;
+}
+.botao a:visited i,
+.botao a:visited span {
+  border-color:#f2f2f2; font-weight: 900; color: #f2f2f2; ;
+}
+
+.botao a:hover i,
+.botao a:hover span {
+  border-color:goldenrod; font-weight: 900; color: goldenrod; transition: color 0.35s ease;
+}
+.botao a:active i,
+.botao a:active span {
+  border-color:#e91e39; font-weight: 900; color: #e91e39; transition: color 0.35s ease;
+}
+
+.botao label:link i,
+.botao label:link span {
+  border-color:#f2f2f2; font-weight: 900; color: #f2f2f2; ;
+}
+.botao label:visited i,
+.botao label:visited span {
+  border-color:#f2f2f2; font-weight: 900; color: #f2f2f2; ;
+}
+.botao label:hover i,
+.botao label:hover span {
+  border-color:goldenrod; font-weight: 900; color: goldenrod; transition: color 0.35s ease;
+}
+.botao label:active i,
+.botao label:active span {
+  border-color:#e91e39; font-weight: 900; color: #e91e39; transition: color 0.35s ease;
+}
 
 .caixaLinkSociais a {font-weight: normal;}
 .caixaLinkSociais a:link {color: #f2f2f2;}
