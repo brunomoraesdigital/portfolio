@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNU AGPL v3 License</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
@@ -21,12 +25,16 @@
             padding: 1rem;
             text-align: center;
             font-size: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         main {
             max-width: 900px;
             margin: 2rem auto;
-            padding: 1rem 2rem;
+            padding: 1rem;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -36,23 +44,29 @@
             color: #4a90e2;
             margin-top: 2rem;
             font-weight: 700;
+            padding-top: 70px; /* Espaço para não ficar atrás do header fixo */
+            margin-top: -50px; /* Compensa o padding */
         }
-
 
         h3 {
             color: #4a90e2;
             font-weight: 700;
-            text-indent: 16px;
-
+            text-indent: 0;
+            margin-top: 1.5rem;
         }
 
         p {
             text-indent: 16px;
-
+            margin: 1rem 0;
         }
 
         ul {
             padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
         }
 
         #topButton {
@@ -67,16 +81,18 @@
             cursor: pointer;
             font-size: 1rem;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s;
+            z-index: 99;
         }
 
         #topButton:hover {
             background-color: #357abd;
+            transform: scale(1.05);
         }
 
         /* ******************************************* */
         .container {
-            padding: 0 30px;
+            padding: 0 15px;
             border-radius: 10px;
             max-width: 800px;
             margin: auto;
@@ -85,14 +101,17 @@
 
         .columns {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             margin-top: 20px;
         }
 
         .column {
             border-radius: 8px;
-            width: 30%;
+            width: 100%;
             text-indent: 16px;
+            margin-bottom: 1.5rem;
+            padding: 0 10px;
         }
 
         .column ul {
@@ -111,7 +130,105 @@
         .info {
             color: rgb(68, 147, 248);
         }
-        /* ******************************************* */
+        
+        /* Índice de navegação simples */
+        .quick-nav {
+            background-color: #e8f4ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .quick-nav a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 10px;
+            white-space: nowrap;
+        }
+        
+        .quick-nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Media Queries para Responsividade */
+        @media screen and (min-width: 768px) {
+            .column {
+                width: 30%;
+            }
+            
+            header {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            header {
+                padding: 1rem 0.5rem;
+                font-size: 1.3rem;
+            }
+            
+            main {
+                margin: 1rem;
+                padding: 0.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+                padding-top: 60px;
+                margin-top: -40px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            #topButton {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .quick-nav {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .quick-nav a {
+                margin: 5px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            
+            header {
+                font-size: 1.2rem;
+                padding: 0.8rem 0.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+                padding-top: 50px;
+                margin-top: -30px;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 0 5px;
+            }
+            
+            #topButton {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -120,6 +237,12 @@
         <h1>GNU Affero General Public License v3</h1>
     </header>
     <main>
+        <div class="quick-nav">
+            <a href="#preamble">Preâmbulo</a>
+            <a href="#terms">Termos e Condições</a>
+            <a href="#howtoapply">Como Aplicar</a>
+        </div>
+        
         <div class="container">
             <h2><svg aria-hidden="true" focusable="false" class="octicon octicon-law Octicon-sc-9kayk9-0"
                     viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block"
@@ -164,7 +287,8 @@
                 </div>
             </div>
         </div>
-        <h2>Preamble</h2>
+        
+        <h2 id="preamble">Preamble</h2>
         <p> The GNU Affero General Public License is a free, copyleft license for
             software and other kinds of works, specifically designed to ensure
             cooperation with the community in the case of network server software.</p>
@@ -207,7 +331,7 @@
         <p>The precise terms and conditions for copying, distribution and
             modification follow.</p>
 
-        <h2>Terms and Conditions</h2>
+        <h2 id="terms">Terms and Conditions</h2>
         <h3>0. Definitions.</h3>
 
         <p>"This License" refers to version 3 of the GNU Affero General Public License.</p>
@@ -654,7 +778,7 @@
             receiving the covered work authorizing them to use, propagate, modify
             or convey a specific copy of the covered work, then the patent license
             you grant is automatically extended to all recipients of the covered
-            work and works based on it.</p>
+            work and works based it.</p>
 
         <p>A patent license is "discriminatory" if it does not include within
             the scope of its coverage, prohibits the exercise of, or is
@@ -706,7 +830,7 @@
             combined work, and to convey the resulting work. The terms of this
             License will continue to apply to the part which is the covered work,
             but the work with which it is combined will remain governed by version
-            3 of the GNU General Public License.</p>
+           3 of the GNU General Public License.</p>
 
         <h3>14. Revised Versions of this License.</h3>
 
@@ -768,7 +892,7 @@
 
         <h2>END OF TERMS AND CONDITIONS</h2>
 
-        <p>How to Apply These Terms to Your New Programs</p>
+        <h2 id="howtoapply">How to Apply These Terms to Your New Programs</h2>
 
         <p>If you develop a new program, and you want it to be of the greatest
             possible use to the public, the best way to achieve this is to make it
@@ -819,6 +943,22 @@
 
         <button id="topButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Voltar ao Início</button>
     </main>
+    
+    <script>
+        // Scroll suave para as âncoras considerando o header fixo
+        document.querySelectorAll('.quick-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
