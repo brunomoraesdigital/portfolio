@@ -13,6 +13,7 @@
       { "source": "/tiktok", "destination": "/?utm_source=tiktok&utm_medium=social_bio", "type": 301 },
       { "source": "/github", "destination": "/?utm_source=github&utm_medium=social_profile", "type": 301 },
       { "source": "/pinterest", "destination": "/?utm_source=pinterest&utm_medium=social_pin", "type": 301 },
+      { "source": "/youtube", "destination": "/?utm_source=github&utm_medium=repo_roadmap", "type": 301 },
       { "source": "/link", "destination": "/?utm_source=github&utm_medium=repo_roadmap", "type": 301 }
     ]
   }
