@@ -1,3 +1,25 @@
+/* ============================================ */
+/* CONTEÚDO MESCLADO DE: padrao.css + principal.css + precarregamento.css + habilidades.css */
+/* ============================================ */
+
+/* INÍCIO - padrao.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding:0;
+  font: inherit;
+  font-size:100%;
+  vertical-align:baseline;
+}
+
+a:link {text-decoration: none;color: #000;}
+a:visited {text-decoration: none; color: #000;}
+a:hover {text-decoration: none;color: #000;}
+a:active {text-decoration: none;color: #000;}
+/* FIM - padrao.css */
+
+/* INÍCIO - principal.css */
 @charset "utf-8";
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
@@ -74,11 +96,11 @@ label:nth-child(odd) section{background-color: lightseagreen;}
   background-position: center;
   position: relative;
 }
-.label-secao:nth-child(2) .secao {background-image: url(../imagens/aguia.jpg);}
-.label-secao:nth-child(3) .secao {background-image: url(../imagens/habilidades.jpg);}
-.label-secao:nth-child(4) .secao {background-image: url(../imagens/trabalhos.jpg);}
-.label-secao:nth-child(5) .secao {background-image: url(../imagens/blog.jpg);}
-.label-secao:nth-child(6) .secao {background-image: url(../imagens/contato.jpg);}
+.label-secao:nth-child(2) .secao {background-image: url(imagens/aguia.jpg);}
+.label-secao:nth-child(3) .secao {background-image: url(imagens/habilidades.jpg);}
+.label-secao:nth-child(4) .secao {background-image: url(imagens/trabalhos.jpg);}
+.label-secao:nth-child(5) .secao {background-image: url(imagens/blog.jpg);}
+.label-secao:nth-child(6) .secao {background-image: url(imagens/contato.jpg);}
 
 .secao::after { 
   content: "";
@@ -508,3 +530,117 @@ h2 {
    font-size: 10px;
   }
 }
+/* FIM - principal.css */
+
+/* INÍCIO - precarregamento.css */
+.precarregamento {
+    width: 100%;
+    height: 100%;
+    background: #333333;
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  top: 0;
+  left:0;
+}
+
+.carregando {
+    width: 80px;
+    height: 80px;
+}
+
+.carregando::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    margin: 8px;
+    animation: spin 1.2s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* FIM - precarregamento.css */
+
+/* INÍCIO - habilidades.css */
+.heading {
+	/*display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;*/
+}
+.heading h1{
+/*	font-weight: 700;*/
+}
+.heading p{
+/*	padding: 0 20px;*/
+}
+
+.heading h3{
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+/* -------------------------------- 
+xclip 
+-------------------------------- */
+.cd-headline.clip span {
+    display: inline-block;
+    padding: .2em 0;
+  }
+  .cd-headline.clip span b{
+      text-transform: uppercase;
+  }
+  .cd-headline.clip .cd-words-wrapper {
+    overflow: hidden;
+    vertical-align: top;
+  }
+  .cd-headline.clip .cd-words-wrapper::after {
+    /* line */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #aebcb9;
+  }
+  .cd-headline.clip b {
+    opacity: 0;
+  }
+  .cd-headline.clip b.is-visible {
+    opacity: 1;
+  }
+/* FIM - habilidades.css */

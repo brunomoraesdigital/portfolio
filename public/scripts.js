@@ -1,3 +1,9 @@
+// ============================================
+// CONTEÚDO MESCLADO DE: headline.js + sanfona.js + precarregamento.js + copy.js
+// ORDEM: headline.js → sanfona.js → precarregamento.js → copy.js
+// ============================================
+
+// INÍCIO - headline.js
 jQuery(document).ready(function($){
 	//set animation timing
 	var animationDelay = 2500,
@@ -152,3 +158,76 @@ jQuery(document).ready(function($){
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 });
+// FIM - headline.js
+
+// INÍCIO - sanfona.js
+// SANFONA
+var label = document.getElementsByClassName("label-secao");
+var i;
+var j;
+for (i = 0; i < label.length; i++) 
+{
+  label[i].addEventListener("click", function() 
+  {
+    for (j = 0; j < label.length; j++) 
+    {
+      label[j].classList.remove('sec-ativa');
+    }
+    this.classList.toggle("sec-ativa");
+    //===================================
+  });
+}
+// FIM - sanfona.js
+
+// INÍCIO - precarregamento.js
+// LOADER
+      /*  const sobreposicao = document.querySelector("#precarregamento");
+        window.addEventListener("load", function () {
+          sobreposicao.style.display = "none";
+          //sobreposicao.style.background = "skyblue";
+        })*/
+
+/*... - pontos para o texto carregando ideias*/
+
+function updateDots() {
+  const dots = document.getElementById("dots");
+  if (dots.textContent.length === 3) {
+    dots.textContent = "";
+  } else {
+    dots.textContent += ".";
+  }
+}
+let intervalId = setInterval(updateDots, 333);
+
+/*loader*/
+function esconderSobreposicao() {
+  const sobreposicao = document.querySelector("#precarregamento");
+  const tempoMinimo = 1000; // 1 segundo em milissegundos
+  const tempoInicio = Date.now();
+
+  window.addEventListener("load", function() {
+    const tempoRestante = tempoMinimo - (Date.now() - tempoInicio);
+    
+    if (tempoRestante > 0) {
+      setTimeout(() => {
+        sobreposicao.style.display = "none";
+      }, tempoRestante);
+    } else {
+      sobreposicao.style.display = "none";
+    }
+  });
+}
+esconderSobreposicao();
+// FIM - precarregamento.js
+
+// INÍCIO - copy.js
+// Seleciona o elemento onde o ano será exibido
+const anoAtualElement = document.getElementById("ano-atual");
+
+// Obtém o ano atual
+const anoAtual = new Date().getFullYear();
+
+// Atualiza o conteúdo do elemento com o ano atual
+anoAtualElement.innerHTML = `<a href="licenca-agplv3.html" title="Visualizar licença AGPLv3" target="_blank" rel="noopener noreferrer">
+    © ${anoAtual} Bruno Moraes &nbsp;|&nbsp;AGPL-3.0 license</a>`;
+// FIM - copy.js
